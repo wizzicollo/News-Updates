@@ -1,0 +1,16 @@
+.myimages{
+    width: 400px
+}
+.mytop {
+    font-size: 25px !important;
+    background-color: khaki !important;
+    z-index: 100;
+    margin-bottom: 5px;
+    text-align: center;
+}
+footer{
+    background-color:khaki; 
+}
+.mycard{
+background-color:whitesmoke;  
+}

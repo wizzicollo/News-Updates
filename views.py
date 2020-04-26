@@ -20,3 +20,6 @@ def news(id):
     article = get_articles(id)
     print(article)
     return render_template('articles.html',article = article)
+
+
+    

@@ -8,6 +8,9 @@
 
 This is an application that enables users to view news sources and their articles with description of publisher and the time they published,they can also be able to read on the articles when they feel like. 
 
+### Live link to News-Updates Application
+    https://wizzardc96.herokuapp.com/
+
 ### Behaviour Driven Development
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |

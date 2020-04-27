@@ -1,0 +1,56 @@
+{% macro displayNews(news_results) %} {% block styles%}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/main.css') }}"
+/>
+{% endblock %} {% for result in news_results %}
+<div class="col-md-12">
+  <div class="card m-2 shadow card1">
+    <div class="card-header text-center">
+      <h3>{{result.name }}</h3>
+    </div>
+    <div class="card-body">
+      <p class="text-center font-weight-bold">Descriprion</p>
+      <p class="description">{{result.description|truncate(150)}}</p>
+      <p class="text-center font-weight-bold">Category</p>
+      <p class="description">{{result.category}}</p>
+    </div>
+    <div class="text-center mb-3">
+      <a class="btn btn-primary" href="/articles/{{result.id}}"> Read more</a>
+    </div>
+  </div>
+</div>
+{% endfor %} 
+{% endmacro %} 
+{% macro Article(article_result) %} {% for arts in
+article_result %}
+<div class="col-md-12 m-3">
+  <div class="card text-center">
+    <div class="card-header">
+      {{arts.title}}
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-5">
+          <img
+            class="card-img-top "
+            src="{{arts.urlToImage}}"
+            alt="{{arts.title}}"
+          />
+        </div>
+        <div class="col-md-7">
+          <p class="card-text">{{arts.description |truncate(200)}}</p>
+        </div>
+      </div>
+      <a href="{{arts.url}}" class="btn btn-primary">Read More</a>
+    </div>
+    <div class="card-footer text-muted">
+      Published By: {{arts.author}}
+    </div>
+  </div>
+</div>
+{% endfor %} {% endmacro %}

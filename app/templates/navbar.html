@@ -1,24 +1,37 @@
-<nav class=" navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar mytop">
-    <a class="navbar-brand" href="#">News-Updates</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ url_for('index') }}">News-Updates</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
     </button>
-
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto list">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-        <a class="nav-link" href="#">ABC News<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ url_for('index') }}"
+            >Home <span class="sr-only">(current)</span></a
+          >
         </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="{{ url_for('bbc') }}">BBC News</a>
-        </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="{{ url_for('fox') }}">Fox News</a>
-        </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="{{ url_for('nbc') }}">Nbc News</a>
-        </li>
-    </ul>
+      </ul>
     </div>
+  </nav>
 
-</nav>
+
+
+
+
+
+
+
+
+
+
+
+  
